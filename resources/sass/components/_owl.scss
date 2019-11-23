@@ -235,4 +235,55 @@
         border-radius: 30px; }
       .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
         background: #869791; }
-  
+.owl-slide{
+    @include link-color($color-primary, $color-primary, none, none);
+    width: 1110px;
+    height: 500px;
+    float: left;
+    background-position: center;
+    background-size: cover;
+    text-decoration: none;
+    background-color: #EFEFEF;
+    &-content {
+        box-sizing: content-box;
+        font-family: $font-family-headings;
+        width: 300px;
+        display: table;
+        padding: 30px 40px;
+        background-color: #FFF;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    &-category {
+        font-style: italic;
+        font-size: 12px;
+        span {
+            text-transform: uppercase;
+            color: $color-link-default;
+        }
+    }
+}
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    margin-top: -15px;
+    height: 0;
+    .owl-next {
+        float: right;
+        margin-right:35px;
+        width: 100px;
+    }
+    .owl-prev {
+        margin-left: 35px;
+        width: 100px;
+        height: 50px;
+    }
+}

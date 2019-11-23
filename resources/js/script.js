@@ -5,7 +5,11 @@
 $(document).ready(function () {
 
 	$(".owl-carousel").owlCarousel({
-		nav: true
+		nav: true,
+		margin: 20,
+		autoWidth: true,
+		center: true,
+		loop: true,
 	});
 
 });
