@@ -1,0 +1,118 @@
+.header {
+    height:50px;
+    width:100%;
+    &-links {
+        float: left;
+        &.right {
+            float: right;
+        }
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    &-social {
+        li {
+            display: inline-block;
+            margin-left: 10px;
+            a {
+                display: flex;
+                width: 50px;
+                height: 50px;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    fill: $color-link-hover;
+                    width: 20px;
+                    transition: .3s all ease-in-out;
+                }
+                &:hover {
+                    background-color: $color-link-hover;
+                    svg {
+                        fill: $color-link-default;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.header .htheme_container_nav {
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:10;
+}
+.primary-nav nav {
+    float:left;
+}
+.footer-nav nav {
+    float:left;
+    display:table;
+}
+.primary-nav nav div:last-child {
+    float:left;
+}
+.primary-nav nav ul,
+.footer-nav nav ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.primary-nav nav ul li,
+.footer-nav nav ul li {
+    float:left;
+    position:relative;
+}
+.primary-nav nav ul li > a,
+.footer-nav nav ul li > a {
+    display:table;
+    box-sizing:border-box;
+    padding:0 15px;
+    text-decoration:none;
+    letter-spacing:2px;
+    color: $color-text;
+}
+.primary-nav nav ul li > a {
+    line-height:50px;
+}
+.footer-nav nav ul li > a {
+    line-height:75px;
+}
+.footer-nav .htheme_nav_social_items {
+    border-right:none;
+}
+.primary-nav nav ul li > a:hover {
+    background:rgb(0, 0, 0);
+    background:rgba(0, 0, 0, .1);
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+.primary-nav nav ul li > ul {
+    display:none;
+    opacity:0;
+    filter:alpha(opacity=00);
+    width:200px;
+    position:absolute;
+    left:0;
+    top:50px;
+    background-color:#1F2326;
+    z-index:9;
+}
+.primary-nav nav ul li > ul li,
+.primary-nav nav ul li > ul a {
+    width:100%;
+}
+.primary-nav nav ul li > ul.sub-menu ul {
+    left:200px;
+    top:0;
+}
+.primary-nav ul.sub-menu li a {
+    line-height:normal;
+    padding:15px;
+    box-sizing:border-box;
+}
+.logo {
+    float: left;
+}
