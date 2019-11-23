@@ -2,17 +2,20 @@
 	Main JS
 */
 
-$(document).ready(function() {
+$(document).ready(function () {
+
+	$(".owl-carousel").owlCarousel({
+		nav: true
+	});
+
+});
+
+$(window).load(function () {
 
 
 });
 
-$(window).load(function() {
-
-
-});
-
-$(window).resize(function() {
+$(window).resize(function () {
 
 
 });
