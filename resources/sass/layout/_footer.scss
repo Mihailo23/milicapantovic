@@ -1,3 +1,23 @@
 .footer {
-
+    &-social {
+        text-align: center;
+        li {
+            display: inline-block;
+            margin-right: 40px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                @include link-color($color-primary, $color-link-default, none, none);
+                font-size: 12px;
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    .copyright {
+        font-style: italic;
+        font-family: $font-family-headings;
+    }
 }

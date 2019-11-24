@@ -1,0 +1,40 @@
+.feed {
+    position: relative;
+    margin: 50px 0;
+    height: 300px;
+    &-images {
+        @include position-absolute(0,0,0,0);
+        display: flex;
+    }
+    .feed-link{
+        box-sizing:border-box;
+        margin:0 auto;
+        background-color:#FFF;
+        padding:25px;
+        display:table;
+        z-index:1;
+        text-decoration:none;
+        text-align:center;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        h2{
+            padding:0;
+            margin:0;
+            text-decoration:none;
+        }
+        span{
+            display:table;
+            margin:0 auto;
+            padding:5px 0 0;
+        }
+    }
+    a {
+        width: 20%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

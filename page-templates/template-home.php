@@ -157,4 +157,32 @@ $vlog_featured_posts_query = new WP_Query($vlog_featured_args);
         ?>
     </div>
     <!-- /vlog featured posts -->
+    <!-- subscribe -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="subscribe" style="background-image: url('https://placehold.it/1000x300')">
+                    <h2>Budite u toku</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, accusamus.</p>
+                    <div class="subscribe-form"><input type="text"><button class="button">Pošalji</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /subscribe -->
+    <!-- instagram feed -->
+    <div class="feed">
+        <a href="#" class="feed-link">
+            <span>Find us on instagram</span>
+            <h3>milica.m.pantovic</h3>
+        </a>
+        <div class="feed-images">
+            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
+            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
+            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
+            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
+            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
+        </div>
+    </div>
+    <!-- /instagram feed -->
 <?php get_footer(); ?>
