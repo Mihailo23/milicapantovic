@@ -21,6 +21,9 @@ $vlog_featured_args = array(
 );
 $featured_posts_query = new WP_Query($featured_args);
 $vlog_featured_posts_query = new WP_Query($vlog_featured_args);
+
+$subscribe_image = get_field('subscribe_image');
+$subscribe_image_url = $subscribe_image['url'];
 ?>
     <!-- owl-carousel -->
     <?php
@@ -54,7 +57,7 @@ $vlog_featured_posts_query = new WP_Query($vlog_featured_args);
                     <img class="centered-image" src="https://placehold.it/50x50" alt="">
                     <h2>O meni</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quo dolores tempora eum quasi sint odit hic nemo fugit, placeat quis eaque exercitationem dignissimos deserunt. Eum aliquid delectus non voluptatibus?</p>
-                    <a href="#" class="button">Pročitaj više</a>
+                    <a href="#" class="button right">Pročitaj više</a>
                 </div>
             </div>
         </div>
@@ -77,7 +80,7 @@ $vlog_featured_posts_query = new WP_Query($vlog_featured_args);
                     ?>
                         <div class="col-lg-6">
                             <div class="article">
-                                <img src="https://placehold.it/800x600" alt="">
+                                <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
                                 <p class="article-category">u <a href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a></p>
                                 <h2 class="article-title"><?php the_title() ?>.</h2>
                                 <p class="article-excerpt"><?php echo get_the_excerpt() ?></p>
@@ -110,7 +113,7 @@ $vlog_featured_posts_query = new WP_Query($vlog_featured_args);
                     <img class="centered-image" src="https://placehold.it/50x50" alt="">
                     <h2>Knjiga "Ljubav je budna"</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quo dolores tempora eum quasi sint odit hic nemo fugit, placeat quis eaque exercitationem dignissimos deserunt. Eum aliquid delectus non voluptatibus?</p>
-                    <a href="#" class="button">Pročitaj više</a>
+                    <a href="#" class="button right">Pročitaj više</a>
                 </div>
             </div>
         </div>
@@ -133,7 +136,7 @@ $vlog_featured_posts_query = new WP_Query($vlog_featured_args);
                     ?>
                         <div class="col-lg-6">
                             <div class="article">
-                                <img src="https://placehold.it/800x600" alt="">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo get_field('video_url')?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 <p class="article-category">u <a href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a></p>
                                 <h2 class="article-title"><?php the_title() ?>.</h2>
                                 <p class="article-excerpt"><?php echo get_the_excerpt() ?></p>
@@ -161,10 +164,10 @@ $vlog_featured_posts_query = new WP_Query($vlog_featured_args);
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="subscribe" style="background-image: url('https://placehold.it/1000x300')">
+                <div class="subscribe" style="background-image: url('<?php echo $subscribe_image_url; ?>')">
                     <h2>Budite u toku</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, accusamus.</p>
-                    <div class="subscribe-form"><input type="text"><button class="button">Pošalji</button></div>
+                    <div class="subscribe-form"><input type="text"><button class="button right">Pošalji</button></div>
                 </div>
             </div>
         </div>

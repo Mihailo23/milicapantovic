@@ -1,4 +1,5 @@
 .button {
+    cursor: pointer;
     position: relative;
     box-sizing: border-box;
     padding: 10px 20px;
@@ -19,28 +20,54 @@
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-        background-color: $color-link-hover !important;
-        color: $color-link-default !important;
-        border: 1px solid $color-link-default;
-        padding-right: 35px;
-    }
+    transition: all 0.3s ease-in-out;  
     &:after {
+        font-family: 'fontello';
         color: $color-link-default !important;
         position: absolute;
-        right: 0;
-        font-family: 'fontello';
-        content: '\f178';
         font-size: 12px;
-        margin-right: -10px;
         opacity: 0;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
     }
+    &:hover {
+        background-color: $color-link-hover !important;
+        color: $color-link-default !important;
+        border: 1px solid $color-link-default;
+    }
+    
     &:hover:after {
         opacity: 1;
         filter: alpha(opacity=10);
-        margin-right: 10px;
     }
+    &.left {
+        &:after {
+            left: 0;
+            content: '\f178';
+            margin-left: -10px;        
+        }
+        &:hover {   
+            padding-left: 35px;
+        }
+        &:hover:after {
+            margin-left: 10px;
+        }
+    }
+    &.right {
+        &:after {
+            
+        
+        right: 0;
+        content: '\f178';
+        margin-right: -10px;
+        }
+        
+        &:hover {   
+            padding-right: 35px;
+        }
+        &:hover:after {
+            margin-right: 10px;
+        }
+    }
+    
 }

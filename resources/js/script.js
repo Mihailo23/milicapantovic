@@ -10,6 +10,7 @@ $(document).ready(function () {
 		autoWidth: true,
 		center: true,
 		loop: true,
+		navText: ['<span class="button left">Prethodna</span>', '<span class="button right">Sledeca</span>']
 	});
 
 });

@@ -46,7 +46,7 @@
                                 <?php wp_nav_menu() ?>
                             </nav>
                             <div class="header-links margin-left-10">
-                                <a href="#" class="button">Ljubav je budna</a>
+                                <a href="#" class="button right">Ljubav je budna</a>
                             </div>
                             <div class="header-links right">
                                 &nbsp;|&nbsp;<i class="icon-search"></i>
