@@ -1,0 +1,74 @@
+.article {
+    &-title {
+        margin-top: 0;
+    }
+    &-category {
+        font-style: italic;
+        margin-bottom: 0;
+        a {
+            @include link-color($color-link-default, $color-link-default, none, none);
+        }
+    }
+    &-excerpt,
+    &-category {
+        font-weight: $font-weight-light;
+    }
+    .read-more {
+        text-decoration: none;
+        display: table;
+        position: relative;
+        color: $color-link-default !important;
+        font-family: Scope One;
+        font-weight: 400 !important;
+        font-style: inherit;
+        font-size: 14px;
+        text-transform: inherit;
+        letter-spacing: normal;
+        text-decoration: none;
+        &:after {
+            display: table;
+            content: '';
+            width: 40%;
+            height: 1px;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: $color-link-default;
+        }
+        &:hover:after {
+            width: 100%;
+        }
+    }
+    &-social-share {
+        text-align: center;
+        margin-top: 20px;
+        li {
+            display: inline-block;
+            position: relative;
+            &:after {
+                width: 1px;
+                height: 30px;
+                position: absolute;
+                right: 0;
+                top: -5px;
+                content: '';
+                -ms-transform: rotate(20deg);
+                -webkit-transform: rotate(20deg);
+                transform: rotate(20deg);
+                background: rgb(238, 238, 238);
+                background: rgba(238, 238, 238, 1);
+            }
+            &:last-child:after {
+                content: unset;
+            }
+            a {
+                margin: 0 20px;
+                @include link-color($color-primary, $color-link-default);
+            }
+        }
+    }
+}

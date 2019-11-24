@@ -122,6 +122,11 @@
     @include responsive-img();
 }
 
+.image-center {
+    display: block;
+    margin: 0 auto;
+}
+
 .mobile {
 
     &-hide {
