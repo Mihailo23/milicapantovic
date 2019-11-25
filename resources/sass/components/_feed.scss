@@ -7,6 +7,7 @@
         display: flex;
     }
     .feed-link{
+        @include link-color($color-link-default, $color-link-default, none, none);
         box-sizing:border-box;
         margin:0 auto;
         background-color:#FFF;
