@@ -3,6 +3,7 @@
  *  Author: Koto Team
  *  URL: kototheme.co
  */
+require_once( get_template_directory() . '/graph.php' );
 
 if (function_exists('add_theme_support'))
 {
@@ -316,5 +317,4 @@ function load_wpcf7_scripts() {
         }
     }
 }
-
 ?>
