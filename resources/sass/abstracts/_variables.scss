@@ -1,7 +1,7 @@
 // Font
-$font-family: 'Roboto', sans-serif;
-$font-family-headings: 'Scope One', serif;
-$font-icons: 'fontello';
+$font-family: "Roboto", sans-serif;
+$font-family-headings: "Scope One", serif;
+$font-icons: "fontello";
 $font-size: 16px;
 $font-weight-thin: 100;
 $font-weight-extrathin: 200;
@@ -15,11 +15,10 @@ $font-weight-black: 900;
 $line-height: 1.4;
 
 // Colors
-$color-background: #fff;
+$color-white: #fff;
 $color-primary: #555555;
 $color-text: #555;
-$color-link-default: #e194b6;
-$color-link-hover: #ffffff;
+$color-pink: #e194b6;
 $color-hr: #ccc;
 $color-heading: #333;
 $color-line: #ccc;
@@ -35,18 +34,20 @@ $margin: 20px;
 $padding: 20px;
 
 // Image path
-$image-path: '../images/';
+$image-path: "../images/";
 
 // Retina image suffix
-$image-suffix: '-2x';
+$image-suffix: "-2x";
 
 // Font path
-$font-path: '../fonts/';
-
+$font-path: "../fonts/";
 
 // Grid
 $grid-columns: 12;
 $grid-column-gutter: 30px;
+
+// transition
+$transition: all 0.3s ease;
 
 // break points
 $xs: 575px;

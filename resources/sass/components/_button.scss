@@ -1,73 +1,70 @@
 .button {
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  display: inline-block;
+  background: $color-pink;
+  color: $color-white !important;
+  text-decoration: none;
+  font-weight: 300;
+  font-style: inherit;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid $color-pink;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  &:after {
+    font-family: "fontello";
+    color: $color-pink !important;
+    position: absolute;
+    font-size: 12px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
-    position: relative;
-    box-sizing: border-box;
-    padding: 10px 20px;
-    display: inline-block;
-    background:rgba(225,148,182, 1);
-    text-decoration: none;
-    font-weight:300;
-    font-style:inherit;
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
-    -webkit-appearance: none;
-    -webkit-border-radius:0;
-    -moz-border-radius:0; 
-    border-radius:0;
-    color: $color-link-hover !important;
-    border:1px solid $color-link-hover;   
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;  
+  }
+  &:hover {
+    background-color: $color-white !important;
+    color: $color-pink !important;
+    border: 1px solid $color-pink;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    filter: alpha(opacity=10);
+  }
+  &.left {
     &:after {
-        font-family: 'fontello';
-        color: $color-link-default !important;
-        position: absolute;
-        font-size: 12px;
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
+      left: 0;
+      content: "\f178";
+      margin-left: -10px;
     }
     &:hover {
-        background-color: $color-link-hover !important;
-        color: $color-link-default !important;
-        border: 1px solid $color-link-default;
+      padding-left: 35px;
     }
-    
     &:hover:after {
-        opacity: 1;
-        filter: alpha(opacity=10);
+      margin-left: 10px;
     }
-    &.left {
-        &:after {
-            left: 0;
-            content: '\f178';
-            margin-left: -10px;        
-        }
-        &:hover {   
-            padding-left: 35px;
-        }
-        &:hover:after {
-            margin-left: 10px;
-        }
+  }
+  &.right {
+    &:after {
+      right: 0;
+      content: "\f178";
+      margin-right: -10px;
     }
-    &.right {
-        &:after {
-            
-        
-        right: 0;
-        content: '\f178';
-        margin-right: -10px;
-        }
-        
-        &:hover {   
-            padding-right: 35px;
-        }
-        &:hover:after {
-            margin-right: 10px;
-        }
+
+    &:hover {
+      padding-right: 35px;
     }
-    
+    &:hover:after {
+      margin-right: 10px;
+    }
+  }
 }

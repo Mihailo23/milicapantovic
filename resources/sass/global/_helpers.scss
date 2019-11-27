@@ -1,174 +1,152 @@
 .align {
+  &-left {
+    text-align: left;
+  }
 
-    &-left {
-    	text-align: left;
-    }
+  &-right {
+    text-align: right;
+  }
 
-    &-right {
-    	text-align: right;
-    }
+  &-center {
+    text-align: center;
+  }
 
-    &-center {
-    	text-align: center;
-    }
-
-    &-justify {
-    	text-align: justify;
-    }
-
+  &-justify {
+    text-align: justify;
+  }
 }
 
 .text {
+  &-uppercase {
+    text-transform: uppercase;
+  }
 
-    &-uppercase {
-    	text-transform: uppercase;
-    }
+  &-lowercase {
+    text-transform: lowercase;
+  }
 
-    &-lowercase {
-    	text-transform: lowercase;
-    }
-
-    &-capitalize {
-    	text-transform: capitalize;
-    }
-
+  &-capitalize {
+    text-transform: capitalize;
+  }
 }
 
 .margin {
-
-    &-bottom {
-
-        &-5 {
-            margin-bottom: 5px;
-        }
-
-        &-10 {
-            margin-bottom: 10px;
-        }
-
-        &-15 {
-            margin-bottom: 15px;
-        }
-
-        &-20 {
-            margin-bottom: 20px;
-        }
-
+  &-bottom {
+    &-5 {
+      margin-bottom: 5px;
     }
 
-    &-left {
-
-        &-5 {
-            margin-left: 5px;
-        }
-
-        &-10 {
-            margin-left: 10px;
-        }
-
-        &-15 {
-            margin-left: 15px;
-        }
-
-        &-20 {
-            margin-left: 20px;
-        }
-
+    &-10 {
+      margin-bottom: 10px;
     }
 
-    &-right {
-
-        &-5 {
-            margin-right: 5px;
-        }
-
-        &-10 {
-            margin-right: 10px;
-        }
-
-        &-15 {
-            margin-right: 15px;
-        }
-
-        &-20 {
-            margin-right: 20px;
-        }
-
+    &-15 {
+      margin-bottom: 15px;
     }
 
-    &-top {
+    &-20 {
+      margin-bottom: 20px;
+    }
+  }
 
-        &-5 {
-            margin-top: 5px;
-        }
-
-        &-10 {
-            margin-top: 10px;
-        }
-
-        &-15 {
-            margin-top: 15px;
-        }
-
-        &-20 {
-            margin-top: 20px;
-        }
-
+  &-left {
+    &-5 {
+      margin-left: 5px;
     }
 
+    &-10 {
+      margin-left: 10px;
+    }
+
+    &-15 {
+      margin-left: 15px;
+    }
+
+    &-20 {
+      margin-left: 20px;
+    }
+  }
+
+  &-right {
+    &-5 {
+      margin-right: 5px;
+    }
+
+    &-10 {
+      margin-right: 10px;
+    }
+
+    &-15 {
+      margin-right: 15px;
+    }
+
+    &-20 {
+      margin-right: 20px;
+    }
+  }
+
+  &-top {
+    &-5 {
+      margin-top: 5px;
+    }
+
+    &-10 {
+      margin-top: 10px;
+    }
+
+    &-15 {
+      margin-top: 15px;
+    }
+
+    &-20 {
+      margin-top: 20px;
+    }
+  }
 }
 
 .responsive-img {
-    @include responsive-img();
+  @include responsive-img();
 }
 
 .image-center {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .mobile {
-
-    &-hide {
-
-        @include breakpoint(sm) {
-            display: none !important;
-        }
-
+  &-hide {
+    @include breakpoint(sm) {
+      display: none !important;
     }
+  }
 
-    &-show {
+  &-show {
+    display: none !important;
 
-        display: none;
-
-        @include breakpoint(sm) {
-            display: block;
-        }
-
+    @include breakpoint(sm) {
+      display: block !important;
     }
-
+  }
 }
 
 .list-reset {
-    @include list-reset;
+  @include list-reset;
 }
 
 .flex {
+  &-start {
+    @include flex(flex, row, wrap, flex-start, center);
+  }
 
-	&-start {
-		@include flex(flex, row, wrap, flex-start, center);
-	}
+  &-space {
+    @include flex(flex, row, wrap, space-between, center);
+  }
 
-	&-space {
-		@include flex(flex, row, wrap, space-between, center);
-	}
+  &-around {
+    @include flex(flex, row, wrap, space-around, center);
+  }
 
-    &-around {
-		@include flex(flex, row, wrap, space-around, center);
-	}
-
-	&-end {
-		@include flex(flex, row, wrap, flex-end, center);
-	}
-
+  &-end {
+    @include flex(flex, row, wrap, flex-end, center);
+  }
 }

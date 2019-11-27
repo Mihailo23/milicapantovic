@@ -136,7 +136,7 @@ $subscribe_image_url = $subscribe_image['url'];
                     ?>
                         <div class="col-lg-6">
                             <div class="article">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo get_field('video_url')?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo get_field('video_url')?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                 <p class="article-category">u <a href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a></p>
                                 <h2 class="article-title"><?php the_title() ?>.</h2>
                                 <p class="article-excerpt"><?php echo get_the_excerpt() ?></p>
