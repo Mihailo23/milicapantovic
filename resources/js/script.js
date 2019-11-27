@@ -10,7 +10,7 @@ $(document).ready(function () {
 		autoWidth: true,
 		center: true,
 		loop: true,
-		navText: ['<span class="button left">Prethodna</span>', '<span class="button right">Sledeća</span>']
+		navText: ['<span class="icon-left"></span>', '<span class="icon-right"></span>']
 	});
 
 	$(".header-button").click(function (e) {

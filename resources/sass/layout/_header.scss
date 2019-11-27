@@ -17,7 +17,7 @@
   &-social {
     li {
       display: inline-block;
-      margin-left: 10px;
+      margin-left: 5px;
       a {
         display: flex;
         width: 20px;
@@ -31,12 +31,24 @@
   &-button {
     width: 30px;
     height: 30px;
-    background-color: $color-pink;
     display: block;
     position: absolute;
     right: 10px;
     top: 10px;
     z-index: 2;
+    span {
+      width: 20px;
+      height: 2px;
+      border-radius: 1px;
+      background-color: $color-primary;
+      @include position-absolute(9px, null, null, 5px);
+      &:nth-child(2) {
+        top: 14px;
+      }
+      &:last-child {
+        top: 19px;
+      }
+    }
   }
 }
 .logo {

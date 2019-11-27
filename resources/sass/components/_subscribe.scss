@@ -1,26 +1,46 @@
 .subscribe {
-    padding: 50px;
-    height: 250px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    @include flex(flex, column, no-wrap, space-between, flex-start);
-    h2 {
-        margin: 0;
+  padding: 50px;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flex(flex, column, no-wrap, space-between, flex-start);
+
+  @include breakpoint(md) {
+    height: auto;
+  }
+  h2,
+  p {
+    text-shadow: 1px 1px 0 #fff;
+  }
+  h2 {
+    margin: 0;
+  }
+  p {
+    width: 40%;
+    @include breakpoint(md) {
+      width: auto;
     }
-    p {
-        width: 40%;
+  }
+  input {
+    border: none;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-right: 10px;
+    width: 300px;
+    @include breakpoint(md) {
+      width: 100%;
+      margin-bottom: 10px;
     }
-    input {
-        border: none;
-        padding: 10px;
-        display: inline-block;
-        box-sizing: border-box;
-        -webkit-appearance: none;
-        -webkit-border-radius:0;
-        -moz-border-radius:0; 
-        border-radius:0;
-        margin-right: 10px;
-        width: 300px;
+  }
+  .button {
+    @include breakpoint(md) {
+      width: 100%;
     }
+  }
 }

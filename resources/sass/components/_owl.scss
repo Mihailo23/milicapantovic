@@ -327,11 +327,14 @@
   .owl-next {
     float: right;
     margin-right: 35px;
-    width: 100px;
+    @include breakpoint(md) {
+      margin-right: 10px;
+    }
   }
   .owl-prev {
     margin-left: 35px;
-    width: 100px;
-    height: 50px;
+    @include breakpoint(md) {
+      margin-left: 10px;
+    }
   }
 }

@@ -115,7 +115,7 @@
 
 .mobile {
   &-hide {
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       display: none !important;
     }
   }
@@ -123,7 +123,7 @@
   &-show {
     display: none !important;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       display: block !important;
     }
   }

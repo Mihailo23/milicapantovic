@@ -1,7 +1,9 @@
 .navigation {
   @include breakpoint(md) {
-    @include position-absolute(0, 100%, null, null);
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 100vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -30,13 +32,15 @@
 
     > li {
       position: relative;
-      height: 50px;
       display: flex;
       align-items: center;
       margin-right: 10px;
       a {
         @include link-color($color-primary, $color-pink, none, none);
         padding: 10px;
+        @include breakpoint(md) {
+          display: block;
+        }
       }
       > ul {
         @include list-reset;
@@ -54,7 +58,6 @@
       li:last-child a {
         border-bottom: none;
       }
-      > ul.active,
       &:hover > ul {
         top: 100%;
         opacity: 1;
@@ -66,7 +69,16 @@
           opacity: 0;
           z-index: 0;
         }
+
+        > ul.active {
+          top: 100%;
+          opacity: 1;
+          z-index: 3;
+        }
       }
+    }
+    a {
+      text-transform: uppercase;
     }
   }
 }
