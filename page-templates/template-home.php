@@ -35,6 +35,7 @@ $subscribe_image_url = $subscribe_image['url'];
                 $featured_posts_query->the_post();
         ?>
         <a href="<?php echo get_permalink() ?>" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')" class="owl-slide item">
+            <div class="overlay"></div>
             <div class="owl-slide-content">
                 <span class="owl-slide-category">in <span><?php echo get_the_category()[0]->name ?></span></span>
                 <h2><?php echo get_the_title() ?></h2>
@@ -88,7 +89,7 @@ $subscribe_image_url = $subscribe_image['url'];
                                 <ul class="article-social-share list-reset">
                                     <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i class="icon-facebook"></i></a></li>
                                     <li><a href="https://twitter.com/home?status=<?php the_title(); ?>"><i class="icon-twitter"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:8888/milicapantovic/&title=&summary=&source="><i class="icon-instagram"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=<?php echo get_the_excerpt() ?>&source=<?php echo get_home_url(); ?>"><i class="icon-instagram"></i></a></li>
                                     <li><a href="#"><i class="icon-tumblr"></i></a></li>
                                 </ul>
                             </div>
@@ -165,9 +166,12 @@ $subscribe_image_url = $subscribe_image['url'];
         <div class="row">
             <div class="col-lg-12">
                 <div class="subscribe" style="background-image: url('<?php echo $subscribe_image_url; ?>')">
-                    <h2>Budite u toku</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, accusamus.</p>
-                    <div class="subscribe-form"><input type="text"><button class="button right">Pošalji</button></div>
+                    <div class="overlay"></div>
+                    <div class="subscribe-content">
+                        <h2>Budite u toku</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, accusamus.</p>
+                        <div class="subscribe-form"><input type="text"><button class="button right">Pošalji</button></div>    
+                    </div>
                 </div>
             </div>
         </div>

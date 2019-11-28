@@ -1,5 +1,5 @@
 .subscribe {
-  padding: 50px;
+  position: relative;
   height: 250px;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,9 +9,10 @@
   @include breakpoint(md) {
     height: auto;
   }
-  h2,
-  p {
-    text-shadow: 1px 1px 0 #fff;
+  &-content {
+    padding: 50px;
+    width: 100%;
+    position: relative;
   }
   h2 {
     margin: 0;

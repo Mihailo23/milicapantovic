@@ -1,25 +1,25 @@
-@import
-'abstracts/variables',
-'abstracts/mixins',
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-'global/normalize',
-'global/base',
-'global/helpers',
-'global/fonts',
+@import "global/normalize";
+@import "global/base";
+@import "global/helpers";
+@import "global/fonts";
 
-'layout/grid',
-'layout/header',
-'layout/navigation',
-'layout/main',
-'layout/page',
-'layout/footer',
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/main";
+@import "layout/page";
+@import "layout/footer";
 
-'components/button',
-'components/form',
-'components/hero',
-'components/owl',
-'components/article',
-'components/subscribe',
-'components/feed',
+@import "components/button";
+@import "components/form";
+@import "components/hero";
+@import "components/owl";
+@import "components/article";
+@import "components/subscribe";
+@import "components/feed";
+@import "components/overlay";
 
-'pages/home';
+@import "pages/home";

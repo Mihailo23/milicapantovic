@@ -284,6 +284,7 @@
   background: #869791;
 }
 .owl-slide {
+  position: relative;
   @include link-color($color-primary, $color-primary, none, none);
   width: 1110px;
   height: 500px;

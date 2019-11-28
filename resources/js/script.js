@@ -18,7 +18,7 @@ $(document).ready(function () {
 		$(".navigation").toggleClass('active')
 	});
 
-	$('.menu-item-has-children').on('click', 'a', function (e) {
+	$('.menu-item-has-children > a').click(function (e) {
 		e.preventDefault();
 		console.log($(this).find('.sub-menu'));
 
