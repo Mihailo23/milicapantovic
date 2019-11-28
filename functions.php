@@ -5,6 +5,16 @@
  */
 require_once( get_template_directory() . '/graph.php' );
 
+add_filter('locale', 'wpse27056_setLocale');
+
+function wpse27056_setLocale($locale) {
+    if ( is_admin() ) {
+        return 'en_US';
+    }
+
+    return $locale;
+}
+
 if (function_exists('add_theme_support'))
 {
     // menu support

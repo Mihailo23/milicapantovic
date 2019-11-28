@@ -7,7 +7,7 @@
 			<?php single_cat_title(); ?>
 		</h1>
 
-		<?php get_template_part('/template-parts/loop'); ?>
+		<?php get_template_part('/template-parts/loop-vlog'); ?>
 		</div>
 	</div>
 </div>

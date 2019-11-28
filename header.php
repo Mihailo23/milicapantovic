@@ -75,7 +75,12 @@
                                 <i class="icon-instagram"></i>  
                             </a>
                         </li>
-                        &nbsp;|&nbsp;<i class="icon-search"></i>
+                        &nbsp;|&nbsp;
+                        <li>
+                            <a href="#">
+                                <i class="icon-search"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                     </div>

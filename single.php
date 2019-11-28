@@ -8,11 +8,11 @@
 				<div class="row">
 					<div class="col-lg-12">
 						
-						<h1>
+						<h1 class="align-center">
 							<?php the_title(); ?>
 						</h1>
 						
-						<p>
+						<p class="align-center">
 							<?php the_time('F j, Y'); ?>
 						</p>
 

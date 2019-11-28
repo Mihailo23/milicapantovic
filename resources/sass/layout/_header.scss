@@ -18,6 +18,9 @@
     li {
       display: inline-block;
       margin-left: 5px;
+      &:last-child {
+        margin-left: 0;
+      }
       a {
         display: flex;
         width: 20px;

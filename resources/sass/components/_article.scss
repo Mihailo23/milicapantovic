@@ -10,18 +10,12 @@
       @include link-color($color-pink, $color-pink, none, none);
     }
   }
-  &-excerpt,
-  &-category,
-  p {
-    font-weight: $font-weight-light;
-  }
   .read-more {
     text-decoration: none;
     display: table;
     position: relative;
     color: $color-pink !important;
     font-family: Scope One;
-    font-weight: 400 !important;
     font-style: inherit;
     font-size: 14px;
     text-transform: inherit;
