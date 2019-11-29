@@ -1,13 +1,16 @@
 <?php get_header(); ?>
 
 <div class="container">
-
-    <?php while (have_posts()) : the_post(); ?>
+    <div class="row">
+      <div class="col-lg-12">
+      <?php while (have_posts()) : the_post(); ?>
 
       <?php the_content(); ?>
 
-    <?php endwhile; ?>
-
+      <?php endwhile; ?>
+      </div>
+    </div>
+    
 </div>
 
 <?php get_footer(); ?>

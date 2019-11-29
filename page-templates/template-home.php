@@ -177,19 +177,4 @@ $subscribe_image_url = $subscribe_image['url'];
         </div>
     </div>
     <!-- /subscribe -->
-    <!-- instagram feed -->
-    <div class="feed">
-        <a href="#" class="feed-link">
-            <span>Find us on instagram</span>
-            <h3>milica.m.pantovic</h3>
-        </a>
-        <div class="feed-images">
-            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
-            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
-            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
-            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
-            <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
-        </div>
-    </div>
-    <!-- /instagram feed -->
 <?php get_footer(); ?>

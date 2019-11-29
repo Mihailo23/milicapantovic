@@ -9,7 +9,7 @@
 		<div class="col-lg-6">
 			<div class="article">
 				<img src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
-				<p class="article-category">u <a href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a></p>
+				<!-- <p class="article-category">u <a href="<?php // echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a></p> -->
 				<h2 class="article-title"><?php the_title() ?></h2>
 				<p class="article-excerpt"><?php echo get_the_excerpt() ?></p>
 				<a href="<?php echo get_permalink() ?>" class="read-more">Pročitaj više</a>
