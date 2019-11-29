@@ -37,7 +37,7 @@ $subscribe_image_url = $subscribe_image['url'];
         <a href="<?php echo get_permalink() ?>" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>')" class="owl-slide item">
             <div class="overlay"></div>
             <div class="owl-slide-content">
-                <span class="owl-slide-category">in <span><?php echo get_the_category()[0]->name ?></span></span>
+                <span class="owl-slide-category">u <span><?php echo get_the_category()[0]->name ?></span></span>
                 <h2><?php echo get_the_title() ?></h2>
                 <span class="owl-slide-category"><?php echo get_the_date(); ?> od <span><?php echo get_author_name(); ?></span></span>
             </div>
