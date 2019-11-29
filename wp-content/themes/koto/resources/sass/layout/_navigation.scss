@@ -35,9 +35,12 @@
       display: flex;
       align-items: center;
       margin-right: 10px;
+      @include breakpoint(md) {
+        margin-right: 0;
+      }
       a {
         @include link-color($color-primary, $color-pink, none, none);
-        padding: 10px;
+        padding: 8px;
         @include breakpoint(md) {
           display: block;
         }
