@@ -3,9 +3,10 @@
   @include flex(flex, row, wrap, center, center);
   p {
     font-family: $font-family-headings;
-    margin: 50px;
+    margin: 50px 0;
   }
   &-image {
+    max-width: 100%;
     margin-top: 50px;
   }
 }
