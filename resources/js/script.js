@@ -23,7 +23,7 @@ $(document).ready(function () {
 		console.log($(this).find('.sub-menu'));
 
 		$(this).parent().find('.sub-menu').toggleClass('active');
-	})
+	});
 
 });
 

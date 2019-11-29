@@ -3,8 +3,13 @@
  *  Author: Koto Team
  *  URL: kototheme.co
  */
+
+
+// set open graph data
 require_once( get_template_directory() . '/graph.php' );
 
+
+// set admin locale
 add_filter('locale', 'wpse27056_setLocale');
 
 function wpse27056_setLocale($locale) {
@@ -13,6 +18,14 @@ function wpse27056_setLocale($locale) {
     }
 
     return $locale;
+}
+
+// set options page for ACF
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
 }
 
 if (function_exists('add_theme_support'))

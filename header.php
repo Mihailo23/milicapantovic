@@ -61,17 +61,17 @@
                     </div>
                     <ul class="header-social list-reset">
                         <li>
-                            <a href="#">
+                            <a href="<?php the_field('youtube', 'option') ?>" target="_blank">
                                 <i class="icon-youtube"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php the_field('facebook', 'option')?>" target="_blank">
                                 <i class="icon-facebook"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="<?php the_field('instagram', 'option')?>" target="_blank">
                                 <i class="icon-instagram"></i>  
                             </a>
                         </li>
