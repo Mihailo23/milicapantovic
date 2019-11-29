@@ -1,0 +1,27 @@
+.footer {
+  margin: 100px 0 50px 0;
+  &-social {
+    text-align: center;
+    li {
+      display: inline-block;
+      @include breakpoint(md) {
+        margin-right: 10px;
+      }
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        @include link-color($color-primary, $color-pink, none, none);
+        font-size: 13px;
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .copyright {
+    font-style: italic;
+    font-family: $font-family-headings;
+  }
+}

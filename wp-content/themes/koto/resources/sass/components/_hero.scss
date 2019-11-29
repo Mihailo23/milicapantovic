@@ -1,0 +1,10 @@
+.hero {
+  margin-top: 50px;
+  @include flex(flex, row, wrap, center, center);
+  p {
+    font-family: $font-family-headings;
+  }
+  svg {
+    max-width: 100%;
+  }
+}
