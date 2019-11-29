@@ -3,8 +3,9 @@
   @include flex(flex, row, wrap, center, center);
   p {
     font-family: $font-family-headings;
+    margin: 50px;
   }
-  svg {
-    max-width: 100%;
+  &-image {
+    margin-top: 50px;
   }
 }
