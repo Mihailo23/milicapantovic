@@ -49,6 +49,7 @@
         border: 1px solid $color-primary;
         @include position-absolute(0, 0, null, 0);
         transition: $transition;
+        z-index: -1;
       }
       li a {
         border-bottom: 1px solid $color-primary;
@@ -67,7 +68,7 @@
         &:hover > ul {
           top: 0;
           opacity: 0;
-          z-index: 0;
+          z-index: -1;
         }
 
         > ul.active {

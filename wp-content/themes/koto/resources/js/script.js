@@ -20,8 +20,6 @@ $(document).ready(function () {
 
 	$('.menu-item-has-children > a').click(function (e) {
 		e.preventDefault();
-		console.log($(this).find('.sub-menu'));
-
 		$(this).parent().find('.sub-menu').toggleClass('active');
 	});
 
