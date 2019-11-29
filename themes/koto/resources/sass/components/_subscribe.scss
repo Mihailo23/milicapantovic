@@ -1,0 +1,47 @@
+.subscribe {
+  position: relative;
+  height: 250px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flex(flex, column, no-wrap, space-between, flex-start);
+
+  @include breakpoint(md) {
+    height: auto;
+  }
+  &-content {
+    padding: 50px;
+    width: 100%;
+    position: relative;
+  }
+  h2 {
+    margin: 0;
+  }
+  p {
+    width: 40%;
+    @include breakpoint(md) {
+      width: auto;
+    }
+  }
+  input {
+    border: none;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-right: 10px;
+    width: 300px;
+    @include breakpoint(md) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  .button {
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+}
