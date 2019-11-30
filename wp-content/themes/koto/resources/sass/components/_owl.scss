@@ -293,6 +293,9 @@
   background-size: cover;
   text-decoration: none;
   background-color: #efefef;
+  @include breakpoint(md) {
+    height: 300px;
+  }
   &-content {
     box-sizing: content-box;
     font-family: $font-family-headings;
@@ -307,6 +310,10 @@
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    @include breakpoint(md) {
+      padding: $padding;
+      box-sizing: border-box;
+    }
   }
   &-category {
     font-style: italic;
