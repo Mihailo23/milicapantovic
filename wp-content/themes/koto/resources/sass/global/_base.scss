@@ -82,3 +82,14 @@ hr {
   margin: $margin auto;
   padding: 0;
 }
+
+input {
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}

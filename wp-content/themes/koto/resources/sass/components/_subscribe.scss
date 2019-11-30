@@ -23,25 +23,17 @@
       width: auto;
     }
   }
+  .button {
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
   input {
-    border: none;
-    padding: 10px;
-    display: inline-block;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
     margin-right: 10px;
     width: 300px;
     @include breakpoint(md) {
       width: 100%;
       margin-bottom: 10px;
-    }
-  }
-  .button {
-    @include breakpoint(md) {
-      width: 100%;
     }
   }
 }

@@ -22,6 +22,10 @@ $(document).ready(function () {
 		e.preventDefault();
 		$(this).parent().find('.sub-menu').toggleClass('active');
 	});
+	$('#search').click(function (e) {
+		e.preventDefault();
+		$('.search-form').toggleClass('active');
+	})
 
 });
 
