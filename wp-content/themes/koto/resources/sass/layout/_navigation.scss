@@ -83,6 +83,10 @@
         }
       }
     }
+    li.current-menu-item > a,
+    li.current-menu-parent > a {
+      color: $color-pink;
+    }
     a {
       text-transform: uppercase;
     }

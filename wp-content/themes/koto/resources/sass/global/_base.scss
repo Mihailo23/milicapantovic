@@ -20,6 +20,9 @@ h6 {
   font-weight: $font-weight-regular;
   line-height: 1.1;
   margin: $margin 0;
+  @include breakpoint(md) {
+    margin: $margin-mobile 0;
+  }
 }
 
 h1 {
@@ -27,7 +30,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.9em;
 }
 
 h3 {
@@ -66,6 +69,9 @@ a {
 
 p {
   margin: $margin 0;
+  @include breakpoint(md) {
+    margin: $margin-mobile 0;
+  }
 }
 
 b,
