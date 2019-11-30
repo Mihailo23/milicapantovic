@@ -60,7 +60,7 @@ $subscribe_image_url = $subscribe_image['url'];
                     </svg>
                     <h2>O meni</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quo dolores tempora eum quasi sint odit hic nemo fugit, placeat quis eaque exercitationem dignissimos deserunt. Eum aliquid delectus non voluptatibus?</p>
-                    <a href="#" class="button right">Pročitaj više</a>
+                    <a href="<?php the_permalink(13); ?>" class="button right">Pročitaj više</a>
                 </div>
             </div>
         </div>
@@ -122,7 +122,7 @@ $subscribe_image_url = $subscribe_image['url'];
                     </svg>
                     <h2>Knjiga "Ljubav je budna"</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quo dolores tempora eum quasi sint odit hic nemo fugit, placeat quis eaque exercitationem dignissimos deserunt. Eum aliquid delectus non voluptatibus?</p>
-                    <a href="#" class="button right">Pročitaj više</a>
+                    <a href="<?php the_permalink(79) ?>" class="button right">Pročitaj više</a>
                 </div>
             </div>
         </div>
