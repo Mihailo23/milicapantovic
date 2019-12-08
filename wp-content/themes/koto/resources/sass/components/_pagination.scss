@@ -1,0 +1,4 @@
+.page-numbers {
+  padding: 5px;
+  @include link-color($color-pink, $color-pink, none, none);
+}

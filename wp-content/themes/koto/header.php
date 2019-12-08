@@ -107,7 +107,6 @@
             </div>
         </div>
     </div>
-
     <!-- /header -->
 
     <!-- hero -->
@@ -136,5 +135,6 @@
         </div>
     </div>
     <!-- /hero -->
+
     <!-- main -->
     <main class="main">
