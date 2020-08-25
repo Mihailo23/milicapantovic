@@ -124,7 +124,9 @@ wp_reset_postdata();
                     ?>
                     <div class="col-lg-6">
                         <div class="article">
-                            <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
+                            <div class="article-image">
+                                <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
+                            </div>
                             <p class="article-category">u <a
                                     href="<?php echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a>
                             </p>
