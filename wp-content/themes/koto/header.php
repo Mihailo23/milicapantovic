@@ -64,11 +64,11 @@
                                 'menu_class' => 'navigation-list'
                             )) ?>
                             <div class="header-link mobile-show">
-                                <a href="<?php the_permalink(79); ?>" class="button right">Ljubav je budna</a>
+                                <a href="<?php the_permalink(79); ?>" class="button right">Naručite knjigu</a>
                             </div>
                         </nav>
                         <div class="header-link mobile-hide">
-                            <a href="<?php the_permalink(79); ?>" class="button right">Ljubav je budna</a>
+                            <a href="<?php the_permalink(79); ?>" class="button right">Naručite knjigu</a>
                         </div>
                         <ul class="header-social list-reset">
                             <li>
