@@ -1,5 +1,5 @@
 .hero {
-  margin-top: 50px;
+  margin-top: calc(#{$header-padding * 2} + #{$header-height});
   @include flex(flex, row, wrap, center, center);
   p {
     font-family: $font-family-headings;

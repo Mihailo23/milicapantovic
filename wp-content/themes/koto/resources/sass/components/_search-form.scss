@@ -1,14 +1,14 @@
 .search-form {
-  height: 50px;
+  height: $header-height;
   background-color: $color-primary;
   position: fixed;
-  top: 0;
+  top: calc(#{$header-padding * 2});
   left: 0;
   right: 0;
   z-index: 1;
   transition: $transition;
   &.active {
-    top: 50px;
+    top: calc(#{$header-padding * 2} + #{$header-height});
   }
   form,
   input {

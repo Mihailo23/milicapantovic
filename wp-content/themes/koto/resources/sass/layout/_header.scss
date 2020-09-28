@@ -3,10 +3,11 @@
   left: 0;
   top: 0;
   z-index: 10;
-  height: 50px;
+  padding: $header-padding 0;
   width: 100%;
   background-color: #ffffff;
   &-holder {
+    height: $header-height;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,8 +56,12 @@
   }
 }
 .logo {
-  float: left;
-  height: 50px;
+  a {
+    display: block;
+    svg {
+      height: $header-height;
+    }
+  }
   &-image {
     margin-top: 15px;
   }

@@ -17,9 +17,9 @@
 						</p>
 
 						<img src="<?php the_post_thumbnail_url(); ?>" alt="">
-						
-						<?php the_content();?>
-
+						<div class="single-content">
+							<?php the_content();?>
+						</div>
 					</div>
 				</div>
 			</div>
