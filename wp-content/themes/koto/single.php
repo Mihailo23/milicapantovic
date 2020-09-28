@@ -20,6 +20,13 @@
 						<div class="single-content">
 							<?php the_content();?>
 						</div>
+						<ul class="single-social-share list-reset">
+							<li>
+								<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>">
+									<i class="icon-facebook"></i>
+								</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

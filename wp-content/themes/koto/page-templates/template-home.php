@@ -140,12 +140,6 @@ wp_reset_postdata();
                             <ul class="article-social-share list-reset">
                                 <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i
                                             class="icon-facebook"></i></a></li>
-                                <li><a href="https://twitter.com/home?status=<?php the_title(); ?>"><i
-                                            class="icon-twitter"></i></a></li>
-                                <li><a
-                                        href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>&summary=<?php echo get_the_excerpt() ?>&source=<?php echo get_home_url(); ?>"><i
-                                            class="icon-instagram"></i></a></li>
-                                <li><a href="#"><i class="icon-tumblr"></i></a></li>
                             </ul>
                         </div>
                     </div>

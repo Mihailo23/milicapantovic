@@ -4,4 +4,32 @@
       // margin-bottom: 1rem;
     }
   }
+  &-social-share {
+    text-align: center;
+    margin-top: 20px;
+    li {
+      display: inline-block;
+      position: relative;
+      &:after {
+        width: 1px;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        top: -5px;
+        content: "";
+        -ms-transform: rotate(20deg);
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+        background: rgb(238, 238, 238);
+        background: rgba(238, 238, 238, 1);
+      }
+      &:last-child:after {
+        content: unset;
+      }
+      a {
+        margin: 0 20px;
+        @include link-color($color-primary, $color-pink);
+      }
+    }
+  }
 }
