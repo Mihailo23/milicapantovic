@@ -128,8 +128,7 @@
             </div>
             <div class="row center">
                 <div class="col-lg-8">
-                    <p class="align-center">Sloboda se ne čeka, ona se uzme. Ona se uzme. I živi se. Pisanje je moj
-                        nacin da udišem vazduh. I jedini način da izdišem slobodu.</p>
+                    <p class="align-center"><?php the_field('copy', 'option')?></p>
                 </div>
             </div>
         </div>
