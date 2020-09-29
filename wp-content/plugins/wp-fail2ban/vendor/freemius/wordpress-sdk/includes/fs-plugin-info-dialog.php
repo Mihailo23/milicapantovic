@@ -145,15 +145,35 @@
                         }
 
                         if ( is_array( $pricing ) && 0 < count( $pricing ) ) {
-                            $has_paid_plan = true;
+                            $filtered_pricing = array();
 
-                            foreach ( $pricing as &$prices ) {
+                            foreach ( $pricing as $prices ) {
                                 $prices = new FS_Pricing( $prices );
+
+                                /**
+                                 * Force GBP prices
+                                 *
+                                 * @author @invisnet
+                                 */
+                                if ('gbp' != $prices->currency) {
+                                    continue;
+                                }
+
+                                if ( ( $prices->has_monthly() && $prices->monthly_price > 1.0 ) ||
+                                     ( $prices->has_annual() && $prices->annual_price > 1.0 ) ||
+                                     ( $prices->has_lifetime() && $prices->lifetime_price > 1.0 )
+                                ) {
+                                    $filtered_pricing[] = $prices;
+                                }
                             }
 
-                            $plan->pricing = $pricing;
+                            if ( ! empty( $filtered_pricing ) ) {
+                                $has_paid_plan = true;
 
-                            $has_pricing = true;
+                                $plan->pricing = $filtered_pricing;
+
+                                $has_pricing = true;
+                            }
                         }
 
                         if ( is_array( $features ) && 0 < count( $features ) ) {
@@ -394,7 +414,7 @@
                 $price_tag = $pricing->lifetime_price;
             }
 
-            return '$' . $price_tag;
+            return '&pound;' . $price_tag;
         }
 
         /**
@@ -1047,7 +1067,7 @@
                 $href        = add_query_arg( array( 'tab' => $tab, 'section' => $section_name ) );
                 $href        = esc_url( $href );
                 $san_section = esc_attr( $section_name );
-                echo "\t<a name='$san_section' href='$href' $class>$title</a>\n";
+                echo "\t<a name='$san_section' href='$href' $class>" . esc_html( $title ) . "</a>\n";
             }
 
             echo "</div>\n";
@@ -1161,7 +1181,7 @@
                                                     }
 
                                                     if (!multipleLicenses && 1 == pricing.licenses) {
-                                                        return '$' + pricing.price + priceCycle;
+                                                        return '&pound;' + pricing.price + priceCycle;
                                                     }
 
                                                     return _formatLicensesTitle(pricing) + ' - <var class="fs-price">$' + pricing.price + priceCycle + '</var>';
@@ -1414,7 +1434,7 @@
                                 $stars_label
                             ) ) ?>"><?php echo $stars_label ?></a></span>
                                 <span class="counter-back">
-						<span class="counter-bar" style="width: <?php echo 92 * $_rating; ?>px;"></span>
+						<span class="counter-bar" style="width: <?php echo absint(92 * $_rating); ?>px;"></span>
 					</span>
                                 <span class="counter-count"><?php echo number_format_i18n( $ratecount ); ?></span>
                             </div>
@@ -1449,7 +1469,7 @@
                         <?php } ?>
                     <?php } ?>
             </div>
-            <div id="section-holder" class="wrap">
+            <div id="section-holder">
             <?php
             if ( ! empty( $api->tested ) && version_compare( substr( $GLOBALS['wp_version'], 0, strlen( $api->tested ) ), $api->tested, '>' ) ) {
                 echo '<div class="notice notice-warning"><p>' . '<strong>' . fs_text_inline( 'Warning', 'warning', $api->slug ) . ':</strong> ' . fs_text_inline( 'This plugin has not been tested with your current version of WordPress.', 'not-tested-warning', $api->slug ) . '</p></div>';

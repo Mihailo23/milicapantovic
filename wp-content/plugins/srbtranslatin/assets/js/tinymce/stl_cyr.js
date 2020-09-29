@@ -1,0 +1,1 @@
+tinymce.PluginManager.add("stl_cyr",function(t,n){t.addButton("stl_cyr",{icon:!1,image:stl.button_icon,onclick:function(){selection=t.selection.getContent(),t.selection.setContent("[stl_cyr]"+selection+"[/stl_cyr]")}})});

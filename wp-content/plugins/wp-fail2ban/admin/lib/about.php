@@ -4,13 +4,46 @@
  * About
  *
  * @package wp-fail2ban
- * @since 4.2.0
+ * @since   4.2.0
  */
 namespace org\lecklider\charles\wordpress\wp_fail2ban;
 
-if ( !defined( 'ABSPATH' ) ) {
-    exit;
+defined( 'ABSPATH' ) or exit;
+/**
+ * Pull in extra "about" information
+ *
+ * @since 4.3.0
+ *
+ * @return string
+ */
+function _get_extra_about()
+{
+    $extra = '';
+    /**
+     * Don't make a remote call if the user hasn't opted in
+     */
+    
+    if ( !wf_fs()->is_tracking_prohibited() ) {
+        $extra = get_site_transient( 'wp_fail2ban_extra_about' );
+        
+        if ( false === apply_filters( 'wp_fail2ban_extra_about_transient', $extra ) ) {
+            $url = apply_filters( 'wp_fail2ban_extra_about_url', 'https://wp-fail2ban.com/extra-about/?version=' . WP_FAIL2BAN_VER );
+            
+            if ( !is_wp_error( $rv = wp_remote_get( $url ) ) ) {
+                /**
+                 * Try not to fetch more than once per day
+                 */
+                set_site_transient( 'wp_fail2ban_extra_about', $rv['body'], DAY_IN_SECONDS );
+                $extra = $rv['body'];
+            }
+        
+        }
+    
+    }
+    
+    return $extra;
 }
+
 /**
  * About content
  *
@@ -21,6 +54,8 @@ if ( !defined( 'ABSPATH' ) ) {
 function about( $hide_title = false )
 {
     $wp_f2b_ver = substr( WP_FAIL2BAN_VER, 0, strrpos( WP_FAIL2BAN_VER, '.' ) );
+    $extra = _get_extra_about();
+    $utm = '?utm_source=about&utm_medium=about&utm_campaign=' . WP_FAIL2BAN_VER;
     ?>
 <div class="wrap">
   <style>
@@ -28,113 +63,42 @@ function about( $hide_title = false )
       list-style: disc;
       padding-left: 2em;
     }
+    h2#4-3-0 {
+      font-size: 18px !important;
+    }
   </style>
-<?php 
+    <?php 
     if ( !$hide_title ) {
         ?>
   <h1>WP fail2ban</h1>
-<?php 
+    <?php 
     }
     ?>
   <div id="poststuff">
     <div id="post-body" class="metabox-holder columns-2">
       <div id="post-body-content">
         <div class="meta-box-sortables ui-sortable">
+          <?php 
+    echo  $extra ;
+    ?>
           <div class="postbox">
-            <h2>Version 4.2.7.1</h2>
+            <h2 id="4-3-0" style="font-size: 18px">Version 4.3.0</h2>
             <div class="inside">
               <ul>
-                <li>Fix error when blocking user enumeration via <tt>oembed</tt>.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="meta-box-sortables ui-sortable">
-          <div class="postbox">
-            <h2>Version 4.2.7</h2>
-            <div class="inside">
-              <ul>
-                <li>Fix error when blocking user enumeration via REST.</li>
-                <li>Fix buttons on Settings tabs.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="meta-box-sortables ui-sortable">
-          <div class="postbox">
-            <h2>Version 4.2.6</h2>
-            <div class="inside">
-              <ul>
-                <li>Add support for <a href="<?php 
-    echo  admin_url( 'admin.php?page=wp-fail2ban-tools' ) ;
-    ?>">Remote Tools</a> add-on.
-                <li>Add support for the new ClassicPress security page.</li>
-                <li>Improved user enumeration blocking.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="meta-box-sortables ui-sortable">
-          <div class="postbox">
-            <h2>Version 4.2.5</h2>
-            <div class="inside">
-              <ul>
-                <li>Properly fix PHP 5.3 support; tested on CentOS 6. Does not support any UI or Premium features.</li>
-                <li>Fix potential issue with <tt>WP_FAIL2BAN_BLOCK_USER_ENUMERATION</tt> if calling REST API or XMLRPC from admin area.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="meta-box-sortables ui-sortable">
-          <div class="postbox">
-            <h2>Version 4.2.4</h2>
-            <div class="inside">
-              <ul>
-                <li>Add filter for login failed message.</li>
-                <li>Fix logging spam comments from admin area.</li>
-                <li>Fix Settings link from Plugins page.</li>
-                <li>Update Freemius library.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="meta-box-sortables ui-sortable">
-          <div class="postbox">
-            <h2>Version 4.2.3</h2>
-            <div class="inside">
-              <ul>
-                <li>Workaround for some versions of PHP 7.x that would cause <tt>define()</tt>s to be ignored.</li>
-                <li>Add config note to settings tabs.</li>
-                <li>Fix documentation links.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="meta-box-sortables ui-sortable">
-          <div class="postbox">
-            <h2>Version 4.2.2</h2>
-            <div class="inside">
-              <ul>
-                <li>Fix 5.3 compatibility.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="meta-box-sortables ui-sortable">
-          <div class="postbox">
-            <h2>Version 4.2.1</h2>
-            <div class="inside">
-              <ul>
-                <li>Completed support for <tt><a href="https://docs.wp-fail2ban.com/en/4.2/defines/WP_FAIL2BAN_COMMENT_EXTRA_LOG.html" target="docs.wp-fail2ban.com">WP_FAIL2BAN_COMMENT_EXTRA_LOG</a></tt>.</li>
-                <li>Add support for 3rd-party plugins; see <a href="https://docs.wp-fail2ban.com/en/4.2/developers.html" target="docs.wp-fail2ban.com">Developers</a>.<br>
-                  <p><ul>
-                    <li>Add-on for <a href="https://wordpress.org/plugins/wp-fail2ban-addon-contact-form-7/">Contact Form 7</a> (experimental).</li>
-                    <li>Add-on for <a href="https://wordpress.org/plugins/wp-fail2ban-addon-gravity-forms/">Gravity Forms</a> (experimental).</li>
-                  </ul></p>
-                </li>
-                <li>Change logging for known-user with incorrect password; previously logged as unknown user and matched by <tt>hard</tt> filters (due to limitations in older versions of WordPress), now logged as known user and matched by <tt>soft</tt>.</li>
-                <li>Bugfix for email-as-username - now logged correctly and matched by <tt>soft</tt>, not <tt>hard</tt>, filters.</li>
-                <li>Bugfix for regression in code to prevent Free/Premium conflict.</li>
+                <li>Add new dashboard widget: last 5 <tt>syslog</tt> messages.</li>
+                <li>Add full <a href="https://wp-fail2ban.com/features/multisite-networks/<?php 
+    echo  $utm ;
+    ?>" rel="noopener" target="_blank">multisite support</a>.</li>
+                <li>Add <a href="https://wp-fail2ban.com/features/block-username-logins/<?php 
+    echo  $utm ;
+    ?>" rel="noopener" target="_blank">username login blocking</a> (force login with email).</li>
+                <li>Add <a href="https://wp-fail2ban.com/features/empty-username-logging/<?php 
+    echo  $utm ;
+    ?>" rel="noopener" target="_blank">separate logging</a> for login attempts with an empty username.</li>
+                <li>Improve <a href="https://wp-fail2ban.com/features/block-user-enumeration/<?php 
+    echo  $utm ;
+    ?>" rel="noopener" target="_blank">user enumeration blocking</a> compatibility with the WordPress block editor (Gutenberg).</li>
+                <li>Bump the minimum PHP version to 5.6.</li>
               </ul>
             </div>
           </div>
@@ -143,28 +107,44 @@ function about( $hide_title = false )
       <div id="postbox-container-1" class="postbox-container">
         <div class="meta-box-sortables">
           <div class="postbox">
-            <h2>Getting Started</h2>
+            <h3>Getting Started</h3>
             <div class="inside">
               <ol>
                 <li><a href="https://docs.wp-fail2ban.com/en/<?php 
     echo  $wp_f2b_ver ;
-    ?>/introduction.html" target="docs.wp-fail2ban.com">Introduction</a></li>
+    ?>/installation.html<?php 
+    echo  $utm ;
+    ?>" rel="noopener" target="docs.wp-fail2ban.com">Installation</a></li>
                 <li><a href="https://docs.wp-fail2ban.com/en/<?php 
     echo  $wp_f2b_ver ;
-    ?>/configuration.html" target="docs.wp-fail2ban.com">Configuration</a></li>
+    ?>/configuration.html<?php 
+    echo  $utm ;
+    ?>" rel="noopener" target="docs.wp-fail2ban.com">Configuration</a></li>
               </ol>
             </div>
           </div>
           <div class="postbox">
-            <h2>Getting Help</h2>
+            <h3>Getting Help</h3>
             <div class="inside">
               <ul>
-<?php 
-    if ( wf_fs()->is_free_plan() ) {
+        <?php 
+    
+    if ( wf_fs()->is_trial() ) {
         ?>
-                <li><a href="https://wordpress.org/support/plugin/wp-fail2ban/" target="_blank">WordPress.org Forum</a></li>
-<?php 
+                <li><a href="https://forums.invis.net/c/wp-fail2ban-premium/support-trial/<?php 
+        echo  $utm ;
+        ?>" rel="noopener" target="_blank">Trial Support Forum</a></li>
+        <?php 
+    } elseif ( wf_fs()->is_free_plan() ) {
+        ?>
+                <li><a href="https://forums.invis.net/c/wp-fail2ban/support/<?php 
+        echo  $utm ;
+        ?>" rel="noopener" target="_blank">Free Support Forum</a></li>
+        <?php 
     }
+    
+    ?>
+        <?php 
     ?>
             </div>
           </div>
@@ -174,5 +154,5 @@ function about( $hide_title = false )
     &nbsp;
   </div>
 </div>
-<?php 
+    <?php 
 }
