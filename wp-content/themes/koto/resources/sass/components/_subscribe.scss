@@ -23,12 +23,12 @@
       width: auto;
     }
   }
-  .button {
+  .input[type="submit"] {
     @include breakpoint(md) {
       width: 100%;
     }
   }
-  input {
+  input[type="email"] {
     margin-right: 10px;
     width: 300px;
     @include breakpoint(md) {
