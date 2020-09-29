@@ -235,7 +235,7 @@ wp_reset_postdata();
                 <div class="overlay"></div>
                 <div class="subscribe-content">
                     <h2>Budite u toku</h2>
-                    <p><?php the_field('subscribe')?></p>
+                    <p><?php the_field('subscribe_text')?></p>
                     <div class="subscribe-form"><input type="text"><button class="button right">Pošalji</button></div>
                 </div>
             </div>
