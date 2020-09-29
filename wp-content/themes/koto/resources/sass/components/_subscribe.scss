@@ -18,7 +18,7 @@
     margin: 0;
   }
   p {
-    width: 40%;
+    width: 80%;
     @include breakpoint(md) {
       width: auto;
     }
