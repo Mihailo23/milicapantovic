@@ -235,8 +235,7 @@ wp_reset_postdata();
                 <div class="overlay"></div>
                 <div class="subscribe-content">
                     <h2>Budite u toku</h2>
-                    <p>Za sve dodatne informacije, možete uneti svoj email, a ja ću vam se povremeno javljati putem
-                        istog :)</p>
+                    <p><?php the_field('subscribe')?></p>
                     <div class="subscribe-form"><input type="text"><button class="button right">Pošalji</button></div>
                 </div>
             </div>
