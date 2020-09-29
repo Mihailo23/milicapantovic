@@ -1,5 +1,13 @@
-.wpcf7-form {
-  input {
-    border: 1px solid $color-primary;
+.wpcf7 {
+  margin: 0 auto;
+  width: clamp(500px, 70%, 700px);
+  &-form {
+    input {
+      border: 1px solid $color-primary;
+    }
+    input[type="text"],
+    input[type="textarea"] {
+      width: 100%;
+    }
   }
 }
