@@ -22,7 +22,7 @@
 						</div>
 						<ul class="single-social-share list-reset">
 							<li>
-								<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>">
+								<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
 									<i class="icon-facebook"></i>
 								</a>
 							</li>

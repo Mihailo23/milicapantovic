@@ -138,7 +138,7 @@ wp_reset_postdata();
                             <p class="article-excerpt"><?php echo get_the_excerpt() ?></p>
                             <a href="<?php echo get_permalink() ?>" class="read-more">Pročitaj više</a>
                             <ul class="article-social-share list-reset">
-                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"><i
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank"><i
                                             class="icon-facebook"></i></a></li>
                             </ul>
                         </div>
