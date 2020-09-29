@@ -1,7 +1,6 @@
 .feed {
   position: relative;
   margin: 50px 0;
-  height: 300px;
   &-images {
     @include position-absolute(0, 0, 0, 0);
     display: flex;
@@ -12,11 +11,10 @@
     margin: 0 auto;
     background-color: #fff;
     padding: 25px;
-    display: table;
     z-index: 1;
     text-decoration: none;
     text-align: center;
-    position: relative;
+    position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -30,30 +28,6 @@
       display: table;
       margin: 0 auto;
       padding: 5px 0 0;
-    }
-  }
-  &-images {
-    a {
-      width: 20%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      @include breakpoint(md) {
-        width: 0;
-        &:first-child,
-        &:nth-child(2),
-        &:nth-child(3) {
-          width: 33.3333%;
-        }
-      }
-      @include breakpoint(sm) {
-        &:not(:first-child) {
-          width: 0;
-        }
-        &:first-child {
-          width: 100%;
-        }
-      }
     }
   }
 }
