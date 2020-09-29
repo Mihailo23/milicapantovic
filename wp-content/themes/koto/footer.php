@@ -4,9 +4,7 @@
                     <span><i class="icon-instagram"></i>instagram</span>
                     <h3>milica.m.pantovic</h3>
                 </a>
-                <div class="feed-images">
-                    <?php echo do_shortcode( '[instagram-feed]' ); ?>
-                </div>
+                <?php echo do_shortcode( '[instagram-feed]' ); ?>    
             </div>
             <!-- /instagram feed -->
             </main>
