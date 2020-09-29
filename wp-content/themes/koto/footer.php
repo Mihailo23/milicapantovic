@@ -6,11 +6,6 @@
                 </a>
                 <div class="feed-images">
                     <?php echo do_shortcode( '[instagram-feed]' ); ?>
-                    <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
-                    <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
-                    <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
-                    <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
-                    <a href="#" style="background-image: url('https://placehold.it/200x300')"></a>
                 </div>
             </div>
             <!-- /instagram feed -->
