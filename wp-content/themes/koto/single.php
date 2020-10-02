@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 
 	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
+	<?php
+		$featured_image_caption = get_post(get_post_thumbnail_id())->post_excerpt;
+		// $featured_image_title = get_post(get_post_thumbnail_id())->post_title;
+		// $featured_image_content = get_post(get_post_thumbnail_id())->post_content;
+	?>
 		<article class="article">
 			
 			<div class="container">
@@ -15,8 +19,14 @@
 						<p class="align-center article-date">
 							<?php the_time('F j, Y'); ?>
 						</p>
-
-						<img src="<?php the_post_thumbnail_url(); ?>" alt="">
+						<div class="article-featured">
+							<img class="article-featured-image" src="<?php the_post_thumbnail_url(); ?>" alt="">
+							<p class="article-featured-image-caption">
+								<?php echo $featured_image_caption ?>
+								<?php // echo $featured_image_title ?>
+								<?php // echo $featured_image_content ?>
+							</p>
+						</div>
 						<div class="single-content">
 							<?php the_content();?>
 						</div>

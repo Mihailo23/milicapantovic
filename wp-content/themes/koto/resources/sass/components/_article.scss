@@ -14,7 +14,18 @@
       @include link-color($color-pink, $color-pink, none, none);
     }
   }
-  &-image {
+  &-featured {
+    text-align: center;
+    &-image {
+      max-width: 700px;
+      &-caption {
+        margin: 0;
+        font-style: italic;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  &-thumbnail {
     overflow: hidden;
     display: flex;
     align-items: center;

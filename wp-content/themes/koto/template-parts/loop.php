@@ -8,7 +8,7 @@
 	?>
     <div class="col-lg-6">
         <div class="article">
-            <div class="article-image">
+            <div class="article-thumbnail">
                 <a href="<?php echo get_permalink() ?>">
                     <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
                 </a>
