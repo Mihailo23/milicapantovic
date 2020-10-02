@@ -12,7 +12,7 @@
 							<?php the_title(); ?>
 						</h1>
 						
-						<p class="align-center">
+						<p class="align-center article-date">
 							<?php the_time('F j, Y'); ?>
 						</p>
 

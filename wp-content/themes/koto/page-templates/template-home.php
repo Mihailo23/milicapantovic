@@ -209,10 +209,7 @@ wp_reset_postdata();
                             <h2 class="article-title"><?php the_title() ?>.</h2>
                             <p class="article-excerpt"><?php echo get_the_excerpt() ?></p>
                             <ul class="article-social-share list-reset">
-                                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                                <li><a href="#"><i class="icon-instagram"></i></a></li>
-                                <li><a href="#"><i class="icon-tumblr"></i></a></li>
+                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/<?php echo get_field('video_url')?>" target="_blank"><i class="icon-facebook"></i></a></li>
                             </ul>
                         </div>
                     </div>

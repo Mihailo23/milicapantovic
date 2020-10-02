@@ -1,7 +1,7 @@
 .article {
   margin: 20px 0;
   &-title {
-    margin-top: 15px;
+    margin: 1em 0;
     a {
       text-decoration: none;
     }
@@ -35,7 +35,15 @@
       height: 400px;
       object-fit: cover;
       display: block;
+      @include breakpoint(md) {
+        height: auto;
+        max-height: 300px;
+      }
     }
+  }
+  &-date {
+    font-size: 0.75rem;
+    font-style: italic;
   }
   .read-more {
     text-decoration: none;

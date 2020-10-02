@@ -13,7 +13,7 @@
                     <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="">
                 </a>
             </div>
-            <span><?php echo get_the_date('F d, Y')?></span>
+            <p class="article-date"><?php the_time('F d, Y')?></p>
             <!-- <p class="article-category">u <a href="<?php // echo get_category_link(get_the_category()[0]->term_id) ?>"><?php echo get_the_category()[0]->name ?></a></p> -->
             <h2 class="article-title">
                 <a href="<?php echo get_permalink() ?>">
