@@ -170,7 +170,7 @@ wp_reset_postdata();
                 </svg>
                 <h2>Knjiga "Ljubav je budna"</h2>
                 <p><?php the_field('love'); ?></p>
-                <a href="<?php the_permalink(79) ?>" class="button right">Pročitaj više</a>
+                <a href="<?php the_permalink(269) ?>" class="button right">Pročitaj više</a>
             </div>
         </div>
     </div>
