@@ -48,7 +48,7 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <p class="copyright align-center">Copyright <?php the_date('Y')?> by Milica Pantovic</p>
+                            <p class="copyright align-center">Copyright <?php echo date('Y')?> by Milica Pantovic</p>
                         </div>
                     </div>
                 </div>
