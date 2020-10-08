@@ -65,6 +65,9 @@ function wp_theme_nav()
     );
 }
 
+// disable gutenberg
+add_filter('use_block_editor_for_post', '__return_false', 10);
+
 class My_Walker_Nav_Menu extends Walker_Nav_Menu {
   function start_lvl(&$output, $depth = 0, $args = array()) {
     $indent = str_repeat("\t", $depth);
