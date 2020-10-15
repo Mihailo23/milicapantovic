@@ -16,7 +16,7 @@
                     <div class="container">
                         <div class="row center middle">
                             <div class="col-lg-10">
-                                <p>Ovaj sajt koristi kolačiće koji omogućavaju bolje korisničko iskustvo. Dalje korišćenje ovog sajta znači da se slažete sa Politikom privatnosti i korišćenja kolačića.</p>
+                                <p><?php the_field('cookies', 'option') ?></p>
                             </div>
                             <div class="col-lg-2">
                                 <a href="#" class="button cookie-button">Ok</a>
