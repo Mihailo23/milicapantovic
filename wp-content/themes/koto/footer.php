@@ -14,7 +14,7 @@
             <footer class="footer">
                 <div class="cookies">
                     <div class="container">
-                        <div class="row center middle">
+                        <div class="row middle between">
                             <div class="col-lg-10">
                                 <p><?php the_field('cookies', 'option') ?></p>
                             </div>
@@ -25,8 +25,16 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row center middle">
-                        <div class="col-lg-6">
+                    <div class="row center middle">   
+                        <div class="col-lg-4">
+                            <p>Pišite mi na mejl <a href="mailto:milica.m.pantovic@gmail.com" target="_blank">milica.m.pantovic@gmail.com</a> - radujem se da čujem vaše utiske!</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <p class="align-center">
+                                <a href="/privacy-policy">Uslovi korišćenja</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-4">
                             <ul class="footer-social list-reset">
                                 <li>
                                     <a href="<?php the_field('youtube', 'option') ?>" target="_blank">
@@ -44,11 +52,6 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <p class="copyright align-center">Copyright <?php echo date('Y')?> by Milica Pantovic</p>
                         </div>
                     </div>
                 </div>
