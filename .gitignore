@@ -11,6 +11,8 @@
 !.editorconfig
 # track readme.md in the root (i.e. do NOT ignore it)
 !readme.md
+# track robots.txt
+!robots.txt
 # ignore all files that start with ~
 ~*
 # ignore OS generated files
